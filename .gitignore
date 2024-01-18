@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+
+*.h5ad
+*.txt
+*.pkl
+*.pt
+
+bash_messages/
+
+*.ipynb_checkpoints
