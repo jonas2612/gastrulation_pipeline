@@ -33,6 +33,8 @@ adata.obs['batch'] = pd.Categorical(
     adata.obs.cell_id.to_frame().merge(meta, on='cell_id')['experimental_batch']
 )
 
+adata.obs.day = [float(x[1:]) for x in adata.obs.day]
+
 del meta
 
 
