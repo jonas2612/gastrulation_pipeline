@@ -20,9 +20,10 @@ sc.tl.dpt(adata)
 
 adata.write(f'{adata_path}/unintegrated_adata.h5ad')
 
-sc.tl.umap(adata, color='cellcluster_moscot', save=f'_atlas_{sys.argv[2]}_celltype_pca.png')
-sc.tl.umap(adata, color='batch', save=f'_atlas_{sys.argv[2]}_batch_pca.png')
-sc.tl.umap(adata, color='day', save=f'_atlas_{sys.argv[2]}_day_pca.png')
+sc.tl.umap(adata)
+sc.pl.umap(adata, color='cellcluster_moscot', save=f'_atlas_{sys.argv[2]}_celltype_pca.png')
+sc.pl.umap(adata, color='batch', save=f'_atlas_{sys.argv[2]}_batch_pca.png')
+sc.pl.umap(adata, color='day', save=f'_atlas_{sys.argv[2]}_day_pca.png')
 del adata
 
 
@@ -43,6 +44,7 @@ sc.tl.dpt(adata)
 
 adata.write(f'{adata_path}/integrated_adata.h5ad')
 
-sc.tl.umap(adata, color='cellcluster_moscot', save=f'_atlas_{sys.argv[2]}_celltype_emb.png')
-sc.tl.umap(adata, color='batch', save=f'_atlas_{sys.argv[2]}_batch_emb.png')
-sc.tl.umap(adata, color='day', save=f'_atlas_{sys.argv[2]}_day_emb.png')
+sc.tl.umap(adata)
+sc.pl.umap(adata, color='cellcluster_moscot', save=f'_atlas_{sys.argv[2]}_celltype_emb.png')
+sc.pl.umap(adata, color='batch', save=f'_atlas_{sys.argv[2]}_batch_emb.png')
+sc.pl.umap(adata, color='day', save=f'_atlas_{sys.argv[2]}_day_emb.png')
