@@ -79,7 +79,7 @@ pd.DataFrame({'terminal_states_found': [terminal_states_found], 'correct_termina
 
 terminal_state_anno = []
 for state in g.macrostates.cat.categories.astype('string'):
-    if any([terminal_state.startswith(state) for state in terminal_states]):
+    if any([state.startswith(term_state) for term_state in terminal_states]):
         terminal_state_anno.append(state)
 g.set_terminal_states(terminal_state_anno)
 
