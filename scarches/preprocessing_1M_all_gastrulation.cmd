@@ -21,6 +21,10 @@ sbatch /home/icb/jonas.flor/gast_atlas_clean/cellrank/analysis_gastrulation_all_
 sbatch /home/icb/jonas.flor/gast_atlas_clean/cellrank/analysis_gastrulation_all_integrated_w.cmd
 sbatch /home/icb/jonas.flor/gast_atlas_clean/cellrank/analysis_gastrulation_all_unintegrated.cmd
 sbatch /home/icb/jonas.flor/gast_atlas_clean/cellrank/analysis_gastrulation_all_unintegrated_w.cmd
+sbatch /home/icb/jonas.flor/gast_atlas_clean/cellrank/umaps_push_gastrulation_all_integrated.cmd
+sbatch /home/icb/jonas.flor/gast_atlas_clean/cellrank/umaps_push_gastrulation_all_integrated_w.cmd
+sbatch /home/icb/jonas.flor/gast_atlas_clean/cellrank/umaps_push_gastrulation_all_unintegrated.cmd
+sbatch /home/icb/jonas.flor/gast_atlas_clean/cellrank/umaps_push_gastrulation_all_unintegrated_w.cmd
 for m in metric_ari_integrated metric_ASW_integrated metric_cLISI_integrated metric_graph_connectivity_integrated metric_hgv_overlap metric_iLISI_integrated metric_iso_labels_integrated metric_nmi_integrated metric_pcr_integrated metric_silhouette_batch_integrated  metric_silhouette_integrated metric_traject_conservation
 do
     sbatch /home/icb/jonas.flor/gast_atlas_clean/scarches/${m}_gastrulation_all.cmd

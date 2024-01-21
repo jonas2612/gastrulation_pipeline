@@ -1,9 +1,9 @@
 #!/bin/bash
 
 
-#SBATCH -o /home/icb/jonas.flor/gast_atlas_clean/scarches/bash_messages/outputs_spaces_1M_10k_gast
-#SBATCH -e /home/icb/jonas.flor/gast_atlas_clean/scarches/bash_messages/errors_spaces_1M_10k_gast
-#SBATCH -J spaces_1M_10k_gast
+#SBATCH -o /home/icb/jonas.flor/gast_atlas_clean/scarches/bash_messages/outputs_integration_1M_10k_gast
+#SBATCH -e /home/icb/jonas.flor/gast_atlas_clean/scarches/bash_messages/errors_integration_1M_10k_gast
+#SBATCH -J integration_1M_10k_gast
 #SBATCH -p gpu_p
 #SBATCH --qos=gpu_normal
 #SBATCH --gres=gpu:1
@@ -18,10 +18,10 @@ source $HOME/.bashrc
 mamba activate scvi
 python /home/icb/jonas.flor/gast_atlas_clean/scarches/integration.py gastrulation 1M 10k_genes
 
-path="$(grep -i 'error' /home/icb/jonas.flor/gast_atlas_clean/scarches/bash_messages/errors_spaces_1M_10k_gast)"
+path="$(grep -i 'error' /home/icb/jonas.flor/gast_atlas_clean/scarches/bash_messages/errors_integration_1M_10k_gast)"
 if [ -z "$path" ]
 then
-    sbatch /home/icb/jonas.flor/gast_atlas_clean/scarches/preprocessing_1M_10k_gast.cmd
+    sbatch /home/icb/jonas.flor/gast_atlas_clean/scarches/preprocessing_1M_10k_gastrulation.cmd
 else
     echo "Error produced"
 fi

@@ -10,7 +10,6 @@ import sys
 def query_and_subsetting(query_vars: Dict, ref_model: str) -> ad.AnnData:
     query = sc.read_h5ad(query_vars['path'])
     cells = query.uns['celltype_colors']
-    days = query.uns['day_colors']
     batch = query.uns['batch_colors']
     del query.varm
     
@@ -32,7 +31,6 @@ def query_and_subsetting(query_vars: Dict, ref_model: str) -> ad.AnnData:
     query_adata.obs['celltype'] = query.obs.celltype
     query_adata.obs['batch'] = query.obs['batch']
     query_adata.uns['celltype_colors'] = cells
-    query_adata.uns['day_colors'] = days
     query_adata.uns['batch_colors'] = batch
     return query_adata
 

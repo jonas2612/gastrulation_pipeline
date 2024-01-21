@@ -44,7 +44,7 @@ pd.DataFrame(
           ).divergence],
           'divergence_ref': [divergence_ref]
          }
-).to_csv(f'/home/icb/jonas.flor/gast_atlas_clean/{sys.argv[1]}/{sys.argv[2]}/{sys.argv[3]}/{sys.argv[4]}/divergences.csv')
+).to_csv(f'/home/icb/jonas.flor/gast_atlas_clean/cellrank/{sys.argv[1]}/{sys.argv[2]}/{sys.argv[3]}/{sys.argv[4]}/divergences.csv')
 
 sc.pp.neighbors(adata_concat)
 sc.tl.umap(adata_concat)

@@ -96,7 +96,7 @@ adata_nat.obsp['connectivities'] = adata_nat_norm.obsp['connectivities']
 
 #save data
 adata_nat.write('/home/icb/jonas.flor/gast_atlas_clean/data/invitro.h5ad')
-adata_synth.write('/home/icb/jonas.flor/gastrulation_atlas/data/exvitro.h5ad')
+adata_synth.write('/home/icb/jonas.flor/gast_atlas_clean/data/exvitro.h5ad')
 
 #save umaps
 sc.pl.umap(adata_synth, color='celltype', save='_exvitro_celltype.png')

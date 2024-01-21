@@ -7,8 +7,8 @@ import sys
 path = f'/home/icb/jonas.flor/gast_atlas_clean/scarches/{sys.argv[2]}_{sys.argv[3]}/{sys.argv[1]}/{sys.argv[1]}_adata.h5ad'
 ref = sc.read(path)
 
-day_dict = {'exvito': 8.5, 'invito': 8.5, 'gastrulation': 6.5}
-celltype_dict = {'exvito': 'Mixed', 'invito': 'Mixed', 'gastrulation': 'Primitive Streak'}
+day_dict = {'exvitro': 8.5, 'invitro': 8.5, 'gastrulation': 6.5}
+celltype_dict = {'exvitro': 'Mixed', 'invitro': 'Mixed', 'gastrulation': 'Primitive Streak'}
 
 sc.pp.normalize_total(ref)
 sc.pp.log1p(ref)

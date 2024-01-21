@@ -21,6 +21,12 @@ sbatch /home/icb/jonas.flor/gast_atlas_clean/cellrank/analysis_invitro_10k_integ
 sbatch /home/icb/jonas.flor/gast_atlas_clean/cellrank/analysis_invitro_10k_integrated_w.cmd
 sbatch /home/icb/jonas.flor/gast_atlas_clean/cellrank/analysis_invitro_10k_unintegrated.cmd
 sbatch /home/icb/jonas.flor/gast_atlas_clean/cellrank/analysis_invitro_10k_unintegrated_w.cmd
+
+sbatch /home/icb/jonas.flor/gast_atlas_clean/cellrank/umaps_push_invitro_10k_integrated.cmd
+sbatch /home/icb/jonas.flor/gast_atlas_clean/cellrank/umaps_push_invitro_10k_integrated_w.cmd
+sbatch /home/icb/jonas.flor/gast_atlas_clean/cellrank/umaps_push_invitro_10k_unintegrated.cmd
+sbatch /home/icb/jonas.flor/gast_atlas_clean/cellrank/umaps_push_invitro_10k_unintegrated_w.cmd
+
 for m in metric_ari_integrated metric_ASW_integrated metric_cLISI_integrated metric_graph_connectivity_integrated metric_hgv_overlap metric_iLISI_integrated metric_iso_labels_integrated metric_nmi_integrated metric_pcr_integrated metric_silhouette_batch_integrated  metric_silhouette_integrated metric_traject_conservation
 do
     sbatch /home/icb/jonas.flor/gast_atlas_clean/scarches/${m}_invitro_10k.cmd
