@@ -10,7 +10,7 @@ adata_path = f'/home/icb/jonas.flor/gast_atlas_clean/scvi/{sys.argv[1]}_{sys.arg
 adata_int = sc.read_h5ad(f'{adata_path}/integrated_adata.h5ad')
 
 scib_metrics = pd.DataFrame(
-    data={'n_obs': [adata_int.n_obs], 'n_cells': [sys.argv[1]], 'n_genes': [sys.argv[2]], 'n_layers': [sys.argv[3]], 'n_hidden': [sys.argv[4]], 'metric': ['silhouette_integrated']}
+    data={'n_obs': [adata_int.n_obs], 'n_genes': [sys.argv[2]], 'metric': ['silhouette_integrated']}
 )
 scib_metrics['value'] = scib.me.silhouette(adata_int, label_key=label_key, embed='X_emb')
 

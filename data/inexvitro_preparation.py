@@ -45,11 +45,11 @@ sc.pp.neighbors(adata_synth_norm)
 sc.pp.neighbors(adata_nat_norm)
 
 adata_synth_norm.uns['iroot'] = adata_synth_norm.obs.index.get_loc(
-    adata_synth_norm[(adata_synth_norm.obs.day == 'E8.5') & (adata_synth_norm.obs.celltype == 'Mixed')]
+    adata_synth_norm[(adata_synth_norm.obs.day == 8.5) & (adata_synth_norm.obs.celltype == 'Mixed')]
     .obs.first_valid_index()
 )
 adata_nat_norm.uns['iroot'] = adata_nat_norm.obs.index.get_loc(
-    adata_nat_norm[(adata_nat_norm.obs.day == 'E8.5') & (adata_nat_norm.obs.celltype == 'Mixed')]
+    adata_nat_norm[(adata_nat_norm.obs.day == 8.5) & (adata_nat_norm.obs.celltype == 'Mixed')]
     .obs.first_valid_index()
 )
 

@@ -21,7 +21,7 @@ sc.pl.umap(adata, color='day', save='_gastrulation_day.png')
 
 sc.pp.neighbors(adata)
 adata.uns['iroot'] = adata.obs.index.get_loc(
-    adata[(adata.obs.stage == 6.5) & (adata.obs.celltype == 'Primitive Streak')]
+    adata[(adata.obs.day == 6.5) & (adata.obs.celltype == 'Primitive Streak')]
     .obs.first_valid_index()
 )
 sc.tl.dpt(adata)

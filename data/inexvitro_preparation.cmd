@@ -14,7 +14,7 @@
 source $HOME/.bashrc
 
 mamba activate atlas_pca
-python /home/icb/jonas.flor/gast_atlas_clean/data/inexvitro_prep.py
+python /home/icb/jonas.flor/gast_atlas_clean/data/inexvitro_preparation.py
 
 path="$(grep -i -E 'error|killed' /home/icb/jonas.flor/gast_atlas_clean/data/bash_messages/errors_inexvitro_prep)"
 if [ -z "$path" ]
@@ -26,8 +26,8 @@ then
 
     for m in metric_ari metric_ASW metric_cLISI metric_graph_connectivity metric_iLISI metric_iso_labels metric_nmi metric_pcr metric_silhouette_batch metric_silhouette
     do
-        sbatch /home/icb/jonas.flor/gast_atlas_clean/scarches/{m}_unintegrated_exvitro.cmd
-        sbatch /home/icb/jonas.flor/gast_atlas_clean/scarches/{m}_unintegrated_invitro.cmd
+        sbatch /home/icb/jonas.flor/gast_atlas_clean/scarches/${m}_unintegrated_exvitro.cmd
+        sbatch /home/icb/jonas.flor/gast_atlas_clean/scarches/${m}_unintegrated_invitro.cmd
     done
     echo "Done!"
 else

@@ -10,7 +10,7 @@ adata_path = f'/home/icb/jonas.flor/gast_atlas_clean/scvi/{sys.argv[1]}_{sys.arg
 adata = sc.read_h5ad(f'{adata_path}/unintegrated_adata.h5ad')
 
 scib_metrics = pd.DataFrame(
-    data={'n_obs': [adata.n_obs], 'n_cells': [sys.argv[1]], 'n_genes': [sys.argv[2]], 'n_layers': [sys.argv[3]], 'n_hidden': [sys.argv[4]], 'metric': ['iLISI_unintegrated']}
+    data={'n_obs': [adata.n_obs], 'n_genes': [sys.argv[2]], 'metric': ['iLISI_unintegrated']}
 )
 scib_metrics['value'] = scib.me.ilisi_graph(adata, batch_key=condition_key, type_='full')
 
