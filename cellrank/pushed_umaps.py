@@ -46,6 +46,7 @@ pd.DataFrame(
          }
 ).to_csv(f'/home/icb/jonas.flor/gast_atlas_clean/cellrank/{sys.argv[1]}/{sys.argv[2]}/{sys.argv[3]}/{sys.argv[4]}/divergences.csv')
 
+del adata_concat.obsm['X_diffmap']
 sc.pp.neighbors(adata_concat)
 sc.tl.umap(adata_concat)
 
