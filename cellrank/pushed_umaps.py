@@ -50,7 +50,7 @@ del adata_concat.obsm['X_diffmap']
 sc.pp.neighbors(adata_concat)
 sc.tl.umap(adata_concat)
 
-sc.pl.umap(adata_concat, color='cellcluster_moscot', save=f'_{sys.argv[1]}_{sys.argv[2]}_{sys.argv[3]}_{sys.argv[4]}_celltypes.png')
+sc.pl.umap(adata_concat, color='celltype', save=f'_{sys.argv[1]}_{sys.argv[2]}_{sys.argv[3]}_{sys.argv[4]}_celltypes.png')
 sc.pl.umap(adata_concat, color='day', save=f'_{sys.argv[1]}_{sys.argv[2]}_{sys.argv[3]}_{sys.argv[4]}_day.png')
 sc.pl.umap(adata_concat, color='batch', save=f'_{sys.argv[1]}_{sys.argv[2]}_{sys.argv[3]}_{sys.argv[4]}_batch.png')
 sc.pl.umap(adata_concat, color='pushed', save=f'_{sys.argv[1]}_{sys.argv[2]}_{sys.argv[3]}_{sys.argv[4]}_pushed.png')
