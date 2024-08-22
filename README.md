@@ -15,6 +15,6 @@
 
 # Links between folders
 
-**data** &rarr; **subsampling** &rarr; **scvi** &rarr; **oftm**
+**data** &rarr; **subsampling** &rarr; **scvi** &rarr; **otfm**
 
 **data** &rarr; **scarches** &rarr; **cellrank**
